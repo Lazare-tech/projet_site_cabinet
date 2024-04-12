@@ -1,0 +1,50 @@
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(-10px);
+    z-index: 20;
+}
+
+nav ul li:hover .sub-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub-menu li {
+    padding: 10px 20px;
+    white-space: nowrap; /* Empêche le texte de se couper */
+    width: 100%; /* Force la largeur à 100% pour s'adapter à la taille du conteneur */
+}
+
+.sub-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.sub-menu a:hover {
+    background-color: #f0f0f0;
+}
